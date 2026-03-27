@@ -360,6 +360,22 @@ footer {
     padding: 80px 0;
 }
 
+.portfolio h2 {
+    text-align: center;
+    margin: 40px;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.portfolio h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: black;
+    margin: 15px auto;
+}
+
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
