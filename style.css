@@ -537,3 +537,109 @@ footer {
 .featured p {
     opacity: 0.9;
 }
+
+
+@media (max-width: 1024px) {
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        width: 70%;
+    }
+
+    .presentation-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 0;
+        max width: 100%;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .nav-left,
+    .nav-right {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo img {
+        position: static;
+        transform: none;
+        height: 50px;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        height: 300px;
+    }
+
+    .hero-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        border-radius: 30px;
+        padding: 30px 20px;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+
+    }
+
+    .link ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
