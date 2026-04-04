@@ -465,3 +465,22 @@ footer {
 #btn:hover {
     background: #a7a6a3;
 }
+
+.tarifs {
+    padding: 90px 0;
+}
+
+.tarifs h3 {
+    text-align: center;
+
+}
+
+.tarif-img {
+    display: flex;
+    justify-content: space-around;
+  
+}
+
+.tarif-img img {
+    width: 250px;
+}
