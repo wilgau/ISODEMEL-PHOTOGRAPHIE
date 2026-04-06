@@ -475,12 +475,13 @@ footer {
 
 .day-type {
     padding: 100px 20px;
+    text-align: center;
 }
 
 .day-type h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .day-type h2::after {
@@ -489,15 +490,50 @@ footer {
     width: 40px;
     height: 2px;
     background: black;
-    margin: 15px auto;
+    margin: 15px auto 50px;
 }
 
 .step-day {
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(5, 1fr);
     gap: 20px;
-    padding: 60px 20px;
+    max-width: 800px;
+    margin: 30px auto;
+
 }
+
+.step {
+    background: white;
+    padding: 40px 0;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.step:before {
+    content: attr(data-step);
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(27, 26, 26);
+    color: white;
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+.step h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.step p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
 .pricing {
     padding-top: 20px;
     padding: auto 2Opx;
@@ -508,6 +544,7 @@ footer {
 .section-title {
     font-size: 2.2rem;
     margin-bottom: 60px;
+    letter-spacing: 2px;
 }
 
 .section-title::after {
@@ -580,6 +617,7 @@ footer {
 .featured p {
     opacity: 0.9;
 }
+
 
 
 @media (max-width: 1024px) {
