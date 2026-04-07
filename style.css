@@ -17,6 +17,7 @@ body {
     background-color: hsl(40, 25%, 95%);
 }
 
+footer a,
 body p {
     font-family: "Zilla Slab", serif;
     font-weight: 300;
@@ -118,15 +119,15 @@ body p {
 }
 
 .img1 {
-    background-image: url(./assets/img/img8.JPG);
+    background-image: url(./assets/img/img23.jpeg);
 }
 
 .img2 {
-    background-image: url(./assets/img/img9.jpg);
+    background-image: url(./assets/img/img8.jpg);
 }
 
 .img3 {
-    background-image: url(./assets/img/img10.JPG);
+    background-image: url(./assets/img/img22.jpg);
 }
 
 .hero-text {
@@ -351,6 +352,11 @@ footer {
 .link ul{
     display: flex;
     justify-content: space-around;
+}
+
+.link a {
+    text-decoration: none;
+    color: black;
 }
 
 .link::before {
