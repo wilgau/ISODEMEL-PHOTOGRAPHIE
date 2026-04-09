@@ -119,15 +119,15 @@ body p {
 }
 
 .img1 {
-    background-image: url(./assets/img/img23.jpeg);
+    background-image: url(./assets/imgmin/img23minw.webp);
 }
 
 .img2 {
-    background-image: url(./assets/img/img8.jpg);
+    background-image: url(./assets/imgmin/img8minw.webp);
 }
 
 .img3 {
-    background-image: url(./assets/img/img22.jpg);
+    background-image: url(./assets/imgmin/img22minw.webp);
 }
 
 .hero-text {
@@ -151,7 +151,7 @@ body p {
     margin-bottom: 10px;
 }
 
-.hero-text h3 {
+.hero-text h2 {
     font-size: 1.1rem;
     opacity: 0.;
 }
@@ -317,6 +317,8 @@ body p {
     opacity: 0.8;
 }
 
+
+
 .cta {
     padding: 40px 0;
     text-align: center;
@@ -340,6 +342,14 @@ body p {
     height: 2px;
     background: black;
     margin: 15px auto;
+}
+
+.cta-location {
+    font-size: 14px;
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.6;
+    opacity: 0.8;
 }
 
 footer {
