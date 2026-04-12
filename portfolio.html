@@ -3,83 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
+    <title>Portfolio — Isodemel Photographie</title>
     <meta name="description" content="Portfolio de photographe dans le pays d'Aix: personal branding, corporate, restaurants et hôtels. Découvrez mes réalisations">
-
+    <link rel="preload" href="./assets/fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./assets/fonts/Zilla_Slab/ZillaSlab-Light.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-
+    <style>
+        .icon-at, .icon-instagram, .icon-linkedin { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; fill: currentColor; flex-shrink: 0; }
+    </style>
 </head>
 
 <body>
     <header class="navbar">
         <nav class="nav-left">
-            <a href="/index.html">Accueil</a>
-            <a href="./portfolio.html">Portfolio</a>
+            <a href="./index.html">Accueil</a>
+            <a href="./portfolio.html" class="active">Portfolio</a>
         </nav>
-
         <div class="logo">
-            <img src="./assets/img/Logo isodemel.png" alt="logo isodemel">
+            <a href="./index.html">
+                <img src="./assets/img/Logo isodemel.png" alt="Isodemel Photographie - Retour à l'accueil" width="55" height="55">
+            </a>
         </div>
-
         <nav class="nav-right">
             <a href="./tarifs.html">Tarifs</a>
             <a href="./contact.html">Contact</a>
         </nav>
+        <button class="hamburger" aria-label="Menu de navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
-    <section class="portfolio">
-        <h2>Mon Portfolio</h2>
-        <div class="portfolio-container">
-            <a href="./assets/img/img2.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img2min.webp" alt="un café et un bouquet"></a>
-            <a href="./assets/img/img3.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img3min.webp" alt="un thé"></a>
-            <a href="./assets/img/img6.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img6min.webp" alt="">un cake</a>
 
-            <a href="./assets/img/img9.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img9min.webp" alt="un hotel en Grèce"></a>
-            <a href="./assets/img/img32.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img32min.webp" alt="un coin repos dans un hotel en Grèce"></a>
-            <a href="./assets/img/img11.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img11min.webp" alt="un hotel en Grèce"></a>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./index.html">Accueil</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="./tarifs.html">Tarifs</a>
+        <a href="./contact.html">Contact</a>
+    </div>
 
-            <a href="./assets/img/img12.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img12min.webp" loading="lazy" alt="des grains de café"></a>
-            <a href="./assets/img/img8.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img8min.webp" loading="lazy" alt="des grains de café"></a>
-            <a href="./assets/img/img13.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img13min.webp" loading="lazy" alt="des grains de café dans un bocal en verre"></a>
+    <main>
+        <section class="portfolio">
+            <h2>Mon Portfolio</h2>
+            <div class="portfolio-container">
+                <a href="./assets/img/img2.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img2min.webp" alt="Un café et un bouquet" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img3.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img3min.webp" alt="Un thé" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img6.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img6min.webp" alt="Un cake" loading="lazy" width="400" height="300"></a>
 
-            <a href="./assets/img/img17.png" data-lightbox="portfolio"><img src="./assets/imgmin/img17min.webp" loading="lazy" alt="un poignet avec un bracelet"></a>
-            <a href="./assets/img/img18.png" data-lightbox="portfolio"><img src="./assets/imgmin/img18min.webp" loading="lazy" alt="des bijoux de maillots de bain"></a>
-            <a href="./assets/img/img19.png" data-lightbox="portfolio"><img src="./assets/imgmin/img19min.webp" loading="lazy" alt="une main avec des bagues "></a>
+                <a href="./assets/img/img9.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img9min.webp" alt="Un hôtel en Grèce" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img32.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img32min.webp" alt="Un coin repos dans un hôtel en Grèce" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img11.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img11min.webp" alt="Un hôtel en Grèce" loading="lazy" width="400" height="300"></a>
 
-            <a href="./assets/img/img14.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img14min.webp" loading="lazy" alt="un café"></a>
-            <a href="./assets/img/img15.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img15min.webp" loading="lazy" alt="un ice latte"></a>
-            <a href="./assets/img/img16.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img16min.webp" loading="lazy" alt="un café"></a>
+                <a href="./assets/img/img12.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img12min.webp" alt="Des grains de café" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img8.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img8min.webp" alt="Des grains de café" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img13.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img13min.webp" alt="Des grains de café dans un bocal en verre" loading="lazy" width="400" height="300"></a>
 
-            <a href="./assets/img/img10.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img10min.webp" loading="lazy" alt="une personne qui boit un café"></a>
-            <a href="./assets/img/img20.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img20min.webp" loading="lazy" alt="une préparation de café au chemex"></a>
-            <a href="./assets/img/img21.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img21min.webp" loading="lazy" alt="quelqu'un qui boit un café"></a>
+                <a href="./assets/img/img17.png" data-lightbox="portfolio"><img src="./assets/imgmin/img17min.webp" alt="Un poignet avec un bracelet" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img18.png" data-lightbox="portfolio"><img src="./assets/imgmin/img18min.webp" alt="Des bijoux de maillots de bain" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img19.png" data-lightbox="portfolio"><img src="./assets/imgmin/img19min.webp" alt="Une main avec des bagues" loading="lazy" width="400" height="300"></a>
 
-            <a href="./assets/img/img22.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img22min.webp" loading="lazy" alt="une bague avec deux perles"></a>
-            <a href="./assets/img/img28.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img28min.webp" loading="lazy" alt="une perle"></a>
-            <a href="./assets/img/img30.jpeg" data-lightbox="portfolio"><img src="./assets/imgmin/img30min.webp" loading="lazy" alt="un bracelet"></a>
+                <a href="./assets/img/img14.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img14min.webp" alt="Un café" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img15.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img15min.webp" alt="Un ice latte" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img16.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img16min.webp" alt="Un café" loading="lazy" width="400" height="300"></a>
 
-            <a href="./assets/img/img24.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img24min.webp" loading="lazy" alt="préparation d'un burger"></a>
-            <a href="./assets/img/img27.jpeg" data-lightbox="portfolio"><img src="./assets/imgmin/img27min.webp" loading="lazy" alt="un gateau au chocolat"></a>
-            <a href="./assets/img/img26.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img26min.webp" loading="lazy" alt="un grilled cheese"></a>
+                <a href="./assets/img/img10.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img10min.webp" alt="Une personne qui boit un café" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img20.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img20min.webp" alt="Une préparation de café au chemex" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img21.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img21min.webp" alt="Quelqu'un qui boit un café" loading="lazy" width="400" height="300"></a>
 
-            
-        </div>
+                <a href="./assets/img/img22.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img22min.webp" alt="Une bague avec deux perles" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img28.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img28min.webp" alt="Une perle" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img30.jpeg" data-lightbox="portfolio"><img src="./assets/imgmin/img30min.webp" alt="Un bracelet" loading="lazy" width="400" height="300"></a>
 
-    </section>
+                <a href="./assets/img/img24.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img24min.webp" alt="Préparation d'un burger" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img27.jpeg" data-lightbox="portfolio"><img src="./assets/imgmin/img27min.webp" alt="Un gâteau au chocolat" loading="lazy" width="400" height="300"></a>
+                <a href="./assets/img/img26.jpg" data-lightbox="portfolio"><img src="./assets/imgmin/img26min.webp" alt="Un grilled cheese" loading="lazy" width="400" height="300"></a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="link">
-        <ul>
-            <li><a href="mailto:melodie.isodemel@gmail.com"><i class="fa-solid fa-at"></i>melodie.isodemel@gmail.com</a></li>
-            <li><a href="https://www.instagram.com/isodemel_photographie/"><i class="fa-brands fa-instagram"></i>isodemel Photographie</a></li>
-            <li><a href="https://www.linkedin.com/in/isodemel-photographie-8511493b7/"><i class="fa-brands fa-linkedin"></i>Isodemel Photographie</a></li>
-        </ul>
+            <ul>
+                <li><a href="mailto:melodie.isodemel@gmail.com"><svg class="icon-at" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0s256 114.6 256 256v32c0 53-43 96-96 96-29.3 0-55.6-13.2-73.2-33.9C320 374.8 289.4 400 256 400c-70.7 0-128-57.3-128-128s57.3-128 128-128c26.7 0 51.5 8.2 72 22.1V224c0 17.7 14.3 32 32 32s32-14.3 32-32v-32 0c0-106-86-192-192-192zm64 192a64 64 0 1 0-128 0 64 64 0 1 0 128 0z"/></svg>melodie.isodemel@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/isodemel_photographie/" target="_blank" rel="noopener noreferrer"><svg class="icon-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.9 224.1 370.9 339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>Isodemel Photographie</a></li>
+                <li><a href="https://www.linkedin.com/in/isodemel-photographie-8511493b7/" target="_blank" rel="noopener noreferrer"><svg class="icon-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>Isodemel Photographie</a></li>
+            </ul>
         </div>
+        <p class="footer-copy">&copy; 2025 Isodemel Photographie — Tous droits réservés</p>
     </footer>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" defer></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+            hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
 </body>
+</html>

@@ -5,77 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isodemel Photographie</title>
     <meta name="description" content="Photographe personal branding et corporate à Aix-en-Provence et alentours. Photos professionnelles pour entrepreneurs et entreprises">
-    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="./assets/fonts/Julius_Sans_One/JuliusSansOne-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./assets/fonts/Zilla_Slab/ZillaSlab-Light.ttf" as="font" type="font/ttf" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Inline only the 3 SVG icons needed instead of loading 90Ko+ Font Awesome -->
+    <style>
+        .icon-at, .icon-instagram, .icon-linkedin {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.125em;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
     <header class="navbar">
         <nav class="nav-left">
-            <a href="/index.html">Accueil</a>
+            <a href="./index.html" class="active">Accueil</a>
             <a href="./portfolio.html">Portfolio</a>
         </nav>
 
         <div class="logo">
-            <img src="./assets/img/Logo isodemel.png" alt="logo isodemel">
+            <a href="./index.html">
+                <img src="./assets/img/Logo isodemel.png" alt="Isodemel Photographie - Retour à l'accueil" width="55" height="55">
+            </a>
         </div>
 
         <nav class="nav-right">
             <a href="./tarifs.html">Tarifs</a>
             <a href="./contact.html">Contact</a>
         </nav>
+
+        <button class="hamburger" aria-label="Menu de navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="./index.html">Accueil</a>
+        <a href="./portfolio.html">Portfolio</a>
+        <a href="./tarifs.html">Tarifs</a>
+        <a href="./contact.html">Contact</a>
+    </div>
 
     <main>
         <section class="hero">
             <div class="hero-grid">
-                <div class="hero-img img1"></div>
-                <div class="hero-img img2"></div>
-                <div class="hero-img img3"></div>
+                <div class="hero-img">
+                    <img src="./assets/imgmin/img23min.webp" alt="Photo personal branding" fetchpriority="high" decoding="async" width="600" height="900">
+                </div>
+                <div class="hero-img">
+                    <img src="./assets/imgmin/img8min.webp" alt="Photo grains de café" fetchpriority="high" decoding="async" width="600" height="900">
+                </div>
+                <div class="hero-img">
+                    <img src="./assets/imgmin/img22min.webp" alt="Photo bijoux" decoding="async" width="600" height="900">
+                </div>
             </div>
             <div class="hero-text">
                 <h1>Photographe Personal Branding & Corporate</h1>
                 <h2>Des images professionnelles, naturelles et impactantes</h2>
             </div>
         </section>
+
         <section class="presentation">
-            <h2>Parce qu’une image forte ne se contente pas d’être belle. <br> Elle vous positionne.</h2>
+            <h2 class="fade-in-up">Parce qu'une image forte ne se contente pas d'être belle. <br>Elle vous positionne.</h2>
             <div class="presentation-container">
-                <div class="container-left">
-                    <p>Je suis photographe spécialisée en <strong>personal branding et corporate.</strong> J’accompagne les entrepreneurs, indépendants et entreprises à valoriser leur image via des visuels adaptés. J’écoute, je m’adapte aux différents univers et je fais confiance à mon instinct. <br>Mon approche est à la fois professionnelle et humaine, parce que je crois que les meilleures photos naissent de l’échange. Je sais être discrète quand il le faut et être présente quand c’est nécessaire. <br>Je ne cherche pas à transformer. Je cherche à révéler ce qui est déjà là et qui doit être vu.</p>
+                <div class="container-left fade-in-up">
+                    <p>Je suis photographe spécialisée en <strong>personal branding et corporate.</strong> J'accompagne les entrepreneurs, indépendants et entreprises à valoriser leur image via des visuels adaptés. J'écoute, je m'adapte aux différents univers et je fais confiance à mon instinct. <br>Mon approche est à la fois professionnelle et humaine, parce que je crois que les meilleures photos naissent de l'échange. Je sais être discrète quand il le faut et être présente quand c'est nécessaire. <br>Je ne cherche pas à transformer. Je cherche à révéler ce qui est déjà là et qui doit être vu.</p>
                 </div>
-                <div class="container-center"><img src="./assets/imgmin/melo.webp" alt="Mélo alias isodemel">   
+                <div class="container-center fade-in-up">
+                    <img src="./assets/imgmin/melo.webp" alt="Mélodie, photographe Isodemel" loading="lazy" width="280" height="400">
                 </div>
-                <div class="container-right">
-                    <p>On vit dans un monde où le «beau» attire , capte et donne envie. <br> Avant même de lire, on regarde et c’est souvent là que tout se décide. Mais une photographie maîtrisée ne se contente pas d’être esthétique: elle positionne, valorise et inspire confiance. <br> En gros, Le beau attire, le détail rassure, l’image donne envie. Et aujourd’hui, c’est exactement ce qui fait la différence.  Miser  sur des visuels de qualité, c’est se démarquer, faire la différence entre être vu …. et être choisi. </p></div>
+                <div class="container-right fade-in-up">
+                    <p>On vit dans un monde où le «beau» attire, capte et donne envie. <br>Avant même de lire, on regarde et c'est souvent là que tout se décide. Mais une photographie maîtrisée ne se contente pas d'être esthétique : elle positionne, valorise et inspire confiance. <br>En gros, le beau attire, le détail rassure, l'image donne envie. Et aujourd'hui, c'est exactement ce qui fait la différence. Miser sur des visuels de qualité, c'est se démarquer, faire la différence entre être vu… et être choisi.</p>
+                </div>
             </div>
         </section>
 
         <section class="photo">
-            <h2>Une sélection de mon travail</h2>
+            <h2 class="fade-in-up">Une sélection de mon travail</h2>
             <div class="photo-grid">
-                <img src="./assets/imgmin/img3min.webp" alt="Un thé">
-                <img src="./assets/imgmin/img11min.webp" alt="Un hotel en Grèce">
-                <img src="./assets/imgmin/img12min.webp" alt="Des grains de café">
-                <img src="./assets/imgmin/img20min.webp" alt="Fabrication de café">
-                <img src="./assets/imgmin/img2min.webp" alt="Une tasse à café et un bouquet de fleurs">
-                <img src="./assets/imgmin/img19min.webp" alt="Des bijoux sur un maillot de bain">
+                <img src="./assets/imgmin/img3min.webp" alt="Un thé" loading="lazy" width="400" height="300" class="fade-in-up">
+                <img src="./assets/imgmin/img11min.webp" alt="Un hôtel en Grèce" loading="lazy" width="400" height="300" class="fade-in-up">
+                <img src="./assets/imgmin/img12min.webp" alt="Des grains de café" loading="lazy" width="400" height="300" class="fade-in-up">
+                <img src="./assets/imgmin/img20min.webp" alt="Fabrication de café" loading="lazy" width="400" height="300" class="fade-in-up">
+                <img src="./assets/imgmin/img2min.webp" alt="Une tasse à café et un bouquet de fleurs" loading="lazy" width="400" height="300" class="fade-in-up">
+                <img src="./assets/imgmin/img19min.webp" alt="Des bijoux sur un maillot de bain" loading="lazy" width="400" height="300" class="fade-in-up">
             </div>
             <a href="./portfolio.html" class="btn">Voir le Portfolio complet</a>
         </section>
 
         <section class="service-section">
-            <h2>Pour Qui</h2>
+            <h2 class="fade-in-up">Pour Qui</h2>
             <div class="service-grid">
-                <div class="service">
+                <div class="service fade-in-up">
                     <h3>Personal Branding</h3>
                     <p>Des portraits naturels pour valoriser votre image et votre activité.</p>
                 </div>
-                <div class="service">
+                <div class="service fade-in-up">
                     <h3>Corporate</h3>
                     <p>Des images professionnelles pour votre entreprise et vos équipes.</p>
                 </div>
-                <div class="service">
+                <div class="service fade-in-up">
                     <h3>Reportage</h3>
                     <p>Capturer votre activité dans son environnement réel.</p>
                 </div>
@@ -84,23 +124,82 @@
         </section>
 
         <section class="cta">
-            <h2>Discutons de votre projet</h2>
-             <p class="cta-location">Basée dans le Pays d'Aix, je réalise vos shootings à Aix-en-Provence, Pertuis, Manosque et dans toute la région. Des déplacements sont possibles au-delà, n'hésitez pas à me contacter pour en discuter.</p>
+            <h2 class="fade-in-up">Discutons de votre projet</h2>
+            <p class="cta-location fade-in-up">Basée dans le Pays d'Aix, je réalise vos shootings à Aix-en-Provence, Pertuis, Manosque et dans toute la région. Des déplacements sont possibles au-delà, n'hésitez pas à me contacter pour en discuter.</p>
             <a href="./contact.html" class="btn">Me contacter</a>
         </section>
-
     </main>
 
     <footer>
         <div class="link">
-        <ul>
-            <li><a href="mailto:melodie.isodemel@gmail.com"><i class="fa-solid fa-at"></i>melodie.isodemel@gmail.com</a></li>
-            <li><a href="https://www.instagram.com/isodemel_photographie/"><i class="fa-brands fa-instagram"></i>Isodemel Photographie</a></li>
-            <li><a href="https://www.linkedin.com/in/isodemel-photographie-8511493b7/"><i class="fa-brands fa-linkedin"></i>Isodemel Photographie</a></li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="mailto:melodie.isodemel@gmail.com">
+                        <svg class="icon-at" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0s256 114.6 256 256v32c0 53-43 96-96 96-29.3 0-55.6-13.2-73.2-33.9C320 374.8 289.4 400 256 400c-70.7 0-128-57.3-128-128s57.3-128 128-128c26.7 0 51.5 8.2 72 22.1V224c0 17.7 14.3 32 32 32s32-14.3 32-32v-32 0c0-106-86-192-192-192zm64 192a64 64 0 1 0-128 0 64 64 0 1 0 128 0z"/></svg>
+                        melodie.isodemel@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/isodemel_photographie/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9S160.5 370.9 224.1 370.9 339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        Isodemel Photographie
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/isodemel-photographie-8511493b7/" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                        Isodemel Photographie
+                    </a>
+                </li>
+            </ul>
         </div>
+        <p class="footer-copy">&copy; 2025 Isodemel Photographie — Tous droits réservés</p>
     </footer>
-    
-    
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+            hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Scroll animations - requestIdleCallback for non-blocking setup
+        if ('IntersectionObserver' in window) {
+            const setupObserver = () => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+                document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            };
+
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(setupObserver);
+            } else {
+                setTimeout(setupObserver, 200);
+            }
+        } else {
+            // Fallback: show everything immediately
+            document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible'));
+        }
+    </script>
 </body>
 </html>
