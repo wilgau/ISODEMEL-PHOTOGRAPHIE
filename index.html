@@ -42,20 +42,7 @@
             <a href="./tarifs.html">Tarifs</a>
             <a href="./contact.html">Contact</a>
         </nav>
-
-        <button class="hamburger" aria-label="Menu de navigation" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="./index.html">Accueil</a>
-        <a href="./portfolio.html">Portfolio</a>
-        <a href="./tarifs.html">Tarifs</a>
-        <a href="./contact.html">Contact</a>
-    </div>
 
     <main>
         <section class="hero">
@@ -157,26 +144,7 @@
     </footer>
 
     <script>
-        // Hamburger menu
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            mobileMenu.classList.toggle('open');
-            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-            hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('open');
-                mobileMenu.classList.remove('open');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Scroll animations - requestIdleCallback for non-blocking setup
+        // Scroll animations
         if ('IntersectionObserver' in window) {
             const setupObserver = () => {
                 const observer = new IntersectionObserver((entries) => {
@@ -187,17 +155,14 @@
                         }
                     });
                 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
                 document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
             };
-
             if ('requestIdleCallback' in window) {
                 requestIdleCallback(setupObserver);
             } else {
                 setTimeout(setupObserver, 200);
             }
         } else {
-            // Fallback: show everything immediately
             document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('visible'));
         }
     </script>
